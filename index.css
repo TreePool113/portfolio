@@ -1,35 +1,78 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background-color: #f5f5f5;
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+  background-color: #0f172a;
+  color: white;
+  scroll-behavior: smooth;
 }
 
-.about-content-1 {
+.full-site {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  min-height: 100vh;
+}
+
+.left-side {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 40px;
-  gap: 60px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
 }
 
+.ls-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 400px;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+li{
+  list-style: none;
+}
+.jump-link .hovered-link{
+  display: none;
+}
+.jump-link:hover .normal-link{
+  display: none;
+}
+.jump-link:hover .hovered-link {
+  display: inline;
+}
 .bio {
-  max-width: 500px;
   font-size: 18px;
   line-height: 1.6;
+}
+.right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.about {
+  display: grid;
+  grid-template-areas: "pic bio bio";
+  align-items: center;
+  gap: 10px;
+}
+.about-pic{
+  grid-area: pic;
+}
+.about-bio{
+  grid-area: bio;
+  font-size: large;
+}
+.about-pic {
   text-align: left;
 }
 
-.pic {
-  max-width: 300px;
-}
-
-.pic img {
+.about-pic img {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+  margin-bottom: 20px;
 }
