@@ -17,11 +17,11 @@
           <p>Yo! This is my personal portfolio. A few lines of code, a few small projects — and a whole lot of effort.</p>
         </div>
         <div class="jump-link">
-          <li><a href="#about">
+          <li><a href="#about" id="link-about">
             <span class="normal-link">____ABOUT</span>
             <span class="hovered-link">______   ABOUT</span>
           </a></li>
-          <li><a href="#projects">
+          <li><a href="#projects" id="link-projects">
             <span class="normal-link">____PROJECTS</span>
             <span class="hovered-link">______   PROJECTS</span>
           </a></li>
@@ -57,5 +57,30 @@
   <script>
     AOS.init();
   </script>
+  <script>
+    const sections = document.querySelectorAll("section, .about, .projects");
+    const navLinks = {
+      about: document.getElementById("link-about"),
+      projects: document.getElementById("link-projects"),
+    };
+
+    window.addEventListener("scroll", () => {
+      let scrollPos = window.scrollY + window.innerHeight / 2;
+
+      sections.forEach(section => {
+        const id = section.getAttribute("id");
+        if (!id) return;
+
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+
+        if (scrollPos >= top && scrollPos < top + height) {
+          Object.values(navLinks).forEach(link => link.classList.remove("active"));
+          if (navLinks[id]) navLinks[id].classList.add("active");
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>

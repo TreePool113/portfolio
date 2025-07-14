@@ -61,6 +61,11 @@ li{
 }
 .jump-link li a {
   color: #666e84;
+  transition: 0.3s;
+}
+.jump-link a.active{
+  color: white;
+  font-weight: bold;
 }
 .bio {
   font-size: 18px;
