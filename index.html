@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="full-site">
-    <aside class="left-side">
+    <div class="left-side">
       <div class="ls-contents" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         <div class="bio">
           <h1>Nguyen Phuc Linh</h1>
@@ -18,15 +18,21 @@
         </div>
         <div class="jump-link">
           <li><a href="#about">
-            <span class="normal-link">__about</span>
-            <span class="hovered-link">____ABOUT</span>
+            <span class="normal-link">____ABOUT</span>
+            <span class="hovered-link">______   ABOUT</span>
           </a></li>
-          <li><a href="#projects">__projects</a></li>
+          <li><a href="#projects">
+            <span class="normal-link">____PROJECTS</span>
+            <span class="hovered-link">______   PROJECTS</span>
+          </a></li>
         </div>
       </div>
-    </aside>
-    <main class="right-side">
+    </div>
+    <div class="right-side">
       <div class="about" id="about">
+        <div class="about-title title">
+          <h1>ABOUT</h1>
+        </div>
         <div class="about-pic" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
           <img src="pic3.jpg" alt="Your photo">
         </div>
@@ -34,8 +40,18 @@
           <p>I'm Nguyen Phuc Linh, a final-year Information Technology student at Hanoi University of Mining and Geology (HUMG). I'm passionate about web development and eager to learn new technologies. I've built a few small personal projects and always strive to improve my skills. I'm currently looking for internship opportunities to gain real-world experience and grow as a developer.</p>
         </div>
       </div>
-      <div class="projects" id="projects"></div>
-    </main>
+      <div class="projects" id="projects">
+        <div class="projects-title title">
+          <h1>PROJECTS</h1>
+        </div>
+        <div class="project-list">
+          <button class="project">project 1</button>
+          <button class="project">project 2</button>
+          <button class="project">project 3</button>
+          <button class="project">project 4</button>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>

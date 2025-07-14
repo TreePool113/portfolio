@@ -8,13 +8,18 @@ body {
   scroll-behavior: smooth;
 }
 
-.full-site {
+/* .full-site {
   display: grid;
   grid-template-columns: 40% 60%;
   min-height: 100vh;
-}
+} */
 
 .left-side {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 40vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,14 +39,28 @@ a{
 li{
   list-style: none;
 }
-.jump-link .hovered-link{
+.jump-link{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.jump-link li {
+  list-style: none;
+}
+.jump-link li span.hovered-link {
   display: none;
 }
-.jump-link:hover .normal-link{
+
+.jump-link li:hover span.normal-link {
   display: none;
 }
-.jump-link:hover .hovered-link {
+
+.jump-link li:hover span.hovered-link {
   display: inline;
+  color: white;
+}
+.jump-link li a {
+  color: #666e84;
 }
 .bio {
   font-size: 18px;
@@ -49,15 +68,21 @@ li{
 }
 .right-side {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  /* justify-content: center; */
   padding: 40px;
+  margin-left: 40vw;
+  gap: 50px;
 }
 .about {
   display: grid;
-  grid-template-areas: "pic bio bio";
+  grid-template-areas: "title title title"
+                        "pic bio bio";
   align-items: center;
   gap: 10px;
+}
+.about-title{
+  grid-area: title;
 }
 .about-pic{
   grid-area: pic;
@@ -75,4 +100,26 @@ li{
   height: auto;
   border-radius: 12px;
   margin-bottom: 20px;
+}
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.project {
+  width: 100%;
+  height: 100px;
+  padding: 10px 20px;
+  background-color: #1e293b;
+  color: white;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.project:hover {
+  background-color: #475569;
 }
